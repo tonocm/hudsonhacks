@@ -34,24 +34,6 @@ app.use(function(req, res, next) {
     next(err);
 });
 
-
-// Twilio Credentials
-var accountSid = 'ACd032ef4f95d49d95d6830d0c80da55dd';
-var authToken = '013a87dba50392d3d8bb7ebec60f1ab8';
-
-//require the Twilio module and create a REST client
-var client = require('twilio')(accountSid, authToken);
-
-client.messages.create({
-	from: "+16466933056",
-}, function(err, message) {
-	console.log(message.sid);
-});
-
-
-
-
-
 // error handlers
 
 // development error handler
