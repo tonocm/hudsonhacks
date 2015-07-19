@@ -10,7 +10,7 @@ exports.render = function (phoneNumber, body) {
         allergies.push(x.trim());
     }
 
-    return {'location': location, 'name': name, 'allergies': allergies};
+    return {'location': location, 'name': name, 'allergies': allergies, 'phone': phoneNumber};
   }
   else{
       return {};

@@ -4,6 +4,10 @@ var request = require('request');
 var ticket = require('./ticket');
 var tickets = [];
 
+router.getTickets = function (callback) {
+  return callback(tickets);
+};
+
 // Dev purposes. For Prod use:
 //var uri = 'http://hoodsonhack.azurewebsites.net/api/v1/get';
 var uri = 'http://localhost:3000/api/v1/get';
