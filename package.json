@@ -26,6 +26,7 @@
     "browserify": "*",
     "connect": "^3.0.1",
     "connect-livereload": "*",
+    "cors": "^2.7.1",
     "gulp": "^3.6.0",
     "gulp-autoprefixer": "^1.0.1",
     "gulp-cache": "^0.2.2",
