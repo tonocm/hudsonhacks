@@ -1,17 +1,7 @@
 var express = require('express');
 var request = require('request');
-var router = express.Router();
 
-router.post('/', function(req, res) {
-	var locationJson = req.body;
-	findDistance(locationJson.origin, locationJson.destination, function(address) {
-		res.send(address);
-	});
-	//var dist = findDistance(locationJson.origin, locationJson.destination);
-	//res.send(dist);
-});
-
-var findDistance = function (origin, destination, callback) {
+exports.findDistance = function (origin, destination, callback) {
 	var query_string =  'http://maps.googleapis.com/maps/api/directions/json?' +
 						'origin=' + 
 	                    encodeURIComponent(origin) + '&' + 
@@ -31,7 +21,7 @@ var findDistance = function (origin, destination, callback) {
 	return distance;
 };
 
-var findSafeSpot = function (origin, callback) {
+exports.findSafeSpot = function (origin, callback) {
 	findLatLong(origin, function(lat, lng) {
 		var places_query_string = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?' +
 								  'location=' + lat + ',' + lng + '&' + 
@@ -69,5 +59,3 @@ var findLatLong = function (origin, callback) {
 		
 	});
 };
-
-module.exports = router;
