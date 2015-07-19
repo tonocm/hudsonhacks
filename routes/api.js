@@ -13,11 +13,13 @@ router.get('/v1/send', function(req, res) {
 
     if (req.query.to === undefined)
         res.send('Variable "to" not passed');
+    if (req.query.message === undefined)
+        res.send('Variable "message" not passed');
     else{
         client.sendMessage({
             to: req.query.to, // Any number Twilio can deliver to
             from: "+16466933056", // A number you bought from Twilio and can use for outbound communication
-            body: 'testing from my computer :)' // body of the SMS message
+            body: req.query.message // body of the SMS message
 
         }, function(err, responseData) { //this function is executed when a response is received from Twilio
 
