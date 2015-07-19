@@ -2160,6 +2160,19 @@ body {
   padding-bottom: 10px;
   height: auto;
 }
+.form .submitted {
+  position: absolute;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+}
+.form .response {
+  visibility: visible;
+}
+.form .hidden {
+  visibility: hidden;
+}
 .footer {
   background-color: #DAB785;
   height: 200px;
