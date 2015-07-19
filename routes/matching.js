@@ -1,27 +1,60 @@
 var express = require('express');
 var request = require('request');
-var router = express.Router();
 
-router.post('/', function(req, res) {
-	var locationJson = req.body;
-	findDistance(locationJson.origin, locationJson.destination);
-	res.send(200);
-});
-
-var findDistance = function (origin, destination) {
+exports.findDistance = function (origin, destination, callback) {
 	var query_string =  'http://maps.googleapis.com/maps/api/directions/json?' +
 						'origin=' + 
 	                    encodeURIComponent(origin) + '&' + 
 	                    'destination=' + 
 	                    encodeURIComponent(destination) + '&' + 
 	                    'sensor=false&units=imperial';
-	request(query_string, function (error, response, body) {
-		if (!error && response.statusCode == 200) {
-			console.log(body)
+	var distance = request(query_string, function (error, response, body) {
+		var result = JSON.parse(body);
+		if (result.status == 'OK') {
+			var dist = result.routes[0].legs[0].distance.text; 
+			return callback(dist);
+		}
+		else {
+			return callback(result.status);
 		}
 	});
 };
 
+exports.findSafeSpot = function (origin, callback) {
+	findLatLong(origin, function(lat, lng) {
+		var places_query_string = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?' +
+								  'location=' + lat + ',' + lng + '&' + 
+								  'radius=' + '1610' + '&' +
+								  'opennow' + '&' +
+								  'types=' + 'convenience_store' + '&' + 
+								  'key=' + 'AIzaSyCNl8G6rbctAVLMwrRlyTAfrfzSb6Uq57E';
+		request(places_query_string, function (error, response, body) {
+			var result = JSON.parse(body);
+			if (result.status == 'OK') {
+				var address = result.results[0].vicinity;
+				return callback(address);
+			}
+			else {
+				return callback(result.status);
+			}
+		});
+	});
+	
+};
 
-
-module.exports = router;
+var findLatLong = function (origin, callback) {
+	var location_query_string = 'http://maps.googleapis.com/maps/api/geocode/json?' + 
+								'address=' + encodeURIComponent(origin) + '&' +
+								'sensor=false';
+	request(location_query_string, function (error, response, body) {
+		var result = JSON.parse(body);
+		if (result.status == 'OK') {
+			var latlong = result.results[0].geometry.location;
+			return callback(latlong.lat, latlong.lng);
+		} 
+		else {
+			return callback(result.status, error);
+		}
+		
+	});
+};
