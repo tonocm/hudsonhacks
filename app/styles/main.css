@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Leckerli+One|Patua+One);
+@import url(http://fonts.googleapis.com/css?family=Leckerli+One|Cabin);
 html,
 body {
   width: 100%;
@@ -17,12 +17,12 @@ body {
   width: 100%;
   text-align: center;
   background-color: #D5896F;
-  -webkit-flex: 1 1 320px;
-          flex: 1 1 320px;
+  -webkit-flex: 1 1 400px;
+          flex: 1 1 400px;
 }
 .header .logo {
   margin: auto;
-  margin-top: 80px;
+  margin-top: 100px;
   overflow: hidden;
   display: inline-block;
 }
@@ -45,11 +45,11 @@ body {
   font-family: 'Leckerli One', cursive;
 }
 .header .title h1 {
-  font-size: 70px;
+  font-size: 100px;
   margin-bottom: 0;
 }
 .header .title span {
-  font-size: 20px;
+  font-size: 40px;
 }
 .description {
   width: 80%;
@@ -61,12 +61,78 @@ body {
   margin-top: 20px;
 }
 .description .topic h1 {
-  font-family: 'Patua One', cursive;
+  font-family: 'Cabin', sans-serif;
   margin-bottom: 0;
 }
 .description .topic span {
+  font-family: 'Cabin', sans-serif;
   font-weight: normal;
-  font-size: 20px;
+  font-size: 30px;
+}
+.description .topic .show-dont-tell {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+}
+.description .topic .show-dont-tell .step {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex: 1 1 200px;
+          flex: 1 1 200px;
+  margin-top: 30px;
+}
+.description .topic .show-dont-tell .step .image {
+  -webkit-flex: 0 1 200px;
+          flex: 0 1 200px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.description .topic .show-dont-tell .step .step-desc {
+  -webkit-flex: 1 1 auto;
+          flex: 1 1 auto;
+  vertical-align: center;
+  margin-top: auto;
+  margin-bottom: auto;
+  line-height: 200px;
+  vertical-align: middle;
+  display: inline-block;
+}
+.description .topic .show-dont-tell .step .step-desc .step-count {
+  margin-left: 30px;
+  font-family: 'Leckerli One', cursive;
+  font-size: 40px;
+  margin-right: 10px;
+}
+.description .topic .show-dont-tell .step .step-desc span {
+  font-family: 'Cabin', sans-serif;
+  font-size: 40px;
+}
+.description .topic .show-dont-tell .step .cooking {
+  background-image: url('../images/cooking-emoji.png');
+}
+.description .topic .show-dont-tell .step .sweat {
+  background-image: url('../images/sweat-emoji.png');
+  background-size: 75%;
+}
+.description .topic .show-dont-tell .step .computer {
+  background-image: url('../images/computer-emoji.png');
+}
+.description .topic .show-dont-tell .step .envelope {
+  background-image: url('../images/envelope-emoji.png');
+}
+.description .topic .show-dont-tell .step .phone {
+  background-image: url('../images/phone-emoji.png');
+}
+.description .topic .show-dont-tell .step .meetup {
+  background-image: url('../images/meetup-emoji.png');
+}
+.description .topic .show-dont-tell .step .awesome {
+  background-image: url('../images/awesome-emoji.png');
+  background-size: 75%;
 }
 .form {
   margin: 60px auto 30px;

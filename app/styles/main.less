@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Leckerli+One|Patua+One);
+@import url(http://fonts.googleapis.com/css?family=Leckerli+One|Cabin);
 
 html, body {
     width: 100%;
@@ -18,11 +18,11 @@ html, body {
     width: 100%;
 	text-align: center;
     background-color: #D5896F;
-    flex: 1 1 320px;
+    flex: 1 1 400px;
 
     .logo {
         margin: auto;
-        margin-top: 80px;
+        margin-top: 100px;
         overflow: hidden;
         display: inline-block;
 
@@ -48,11 +48,11 @@ html, body {
 
         font-family: 'Leckerli One', cursive;
         h1 {
-            font-size: 70px;
+            font-size: 100px;
             margin-bottom: 0;
         }
         span {
-            font-size: 20px;
+            font-size: 40px;
         }
     }
 }
@@ -66,14 +66,87 @@ html, body {
     .topic {
         margin-top: 20px;
         h1 {
-            font-family: 'Patua One', cursive;
+            font-family: 'Cabin', sans-serif;;
             margin-bottom: 0;
         }
         span {
+            font-family: 'Cabin', sans-serif;
             font-weight: normal;
-            font-size: 20px;
+            font-size: 30px;
         }
 
+        .show-dont-tell {
+            display: flex;
+            flex-direction: column;
+
+            .step {
+                display: flex;
+                flex-direction: row;
+                flex: 1 1 200px;
+                margin-top: 30px;
+
+                .image {
+                    flex: 0 1 200px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+
+                .step-desc {
+                    flex: 1 1 auto;
+                    vertical-align: center;
+                    margin-top: auto;
+                    margin-bottom: auto;
+                    line-height: 200px;
+                    vertical-align: middle;
+                    display: inline-block;
+
+                    .step-count {
+                        margin-left: 30px;
+                        font-family: 'Leckerli One', cursive;
+                        font-size: 40px;
+                        margin-right: 10px;
+
+                    }
+
+                    span {
+                        font-family: 'Cabin', sans-serif;
+                        font-size: 40px;
+
+                    }
+                }
+
+                .cooking {
+                    background-image: url('../images/cooking-emoji.png');
+                }
+
+                .sweat {
+                    background-image: url('../images/sweat-emoji.png');
+                    background-size: 75%;
+                }
+
+                .computer {
+                    background-image: url('../images/computer-emoji.png');
+                }
+
+                .envelope {
+                    background-image: url('../images/envelope-emoji.png');
+                }
+
+                .phone {
+                    background-image: url('../images/phone-emoji.png');
+                }
+
+                .meetup {
+                    background-image: url('../images/meetup-emoji.png');
+                }
+
+                .awesome {
+                    background-image: url('../images/awesome-emoji.png');
+                    background-size: 75%;
+                }
+            }
+        }
     }
 }
 
