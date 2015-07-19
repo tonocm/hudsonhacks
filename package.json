@@ -41,7 +41,6 @@
     "lazypipe": "^0.2.1",
     "opn": "*",
     "progress": "^1.1.8",
-    "react": "^0.12.0",
     "reactify": "~0.15.2",
     "request": "^2.58.0",
     "serve-index": "^1.1.4",
@@ -50,5 +49,8 @@
     "validatorjs": "^1.3.2",
     "vinyl-source-stream": "*",
     "watchify": "*"
+  },
+  "peerDependencies": {
+    "react": "^0.13.0"
   }
 }
