@@ -3,18 +3,10 @@ var router = express.Router();
 
 var donations = [];
 
-function Donation(foodName, servings, location, allergies) {
-	this.foodName = foodName;
-	this.servings = servings;
-	this.location = location;
-	this.allergies = allergies;
-}
-
 // Set up a donation
 router.post('/', function(req, res) {
-  var donationJson = req.body;
-  var newDonation = new Donation(donationJson.foodName, donationJson.servings, donationJson.location, donationJson.allergies);
-  donations.push(newDonation);
+  var donation = JSON.parse(req.body);
+  donations.push(donation);
   res.send(201);
 });
 
