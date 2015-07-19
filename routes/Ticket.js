@@ -4,7 +4,13 @@ exports.render = function (phoneNumber, body) {
   if(body.length == 3){
     location = body[0].trim();
     name = body[1].trim();
-    allergies = body[2].trim().split(',');
+    allergiesTmp = body[2].split(',');
+    allergies = [];
+    len = allergies.length;
+    for(var i=0; i < len; i++){
+        allergies.push(allergiesTmp.pop().trim());
+    }
+
     return {'location': location, 'name': name, 'allergies': allergies};
   }
   else{
