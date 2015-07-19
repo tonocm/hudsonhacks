@@ -6,9 +6,8 @@ exports.render = function (phoneNumber, body) {
     name = body[1].trim();
     allergiesTmp = body[2].split(',');
     allergies = [];
-    len = allergies.length;
-    for(var i=0; i < len; i++){
-        allergies.push(allergiesTmp.pop().trim());
+    for(x in allergiesTmp){
+        allergies.push(x.trim());
     }
 
     return {'location': location, 'name': name, 'allergies': allergies};
