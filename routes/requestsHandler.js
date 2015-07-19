@@ -21,7 +21,6 @@ router.get('/', function(req, res) {
               var singleRequest = jsonBody.pop();
               tickets.push(ticket.render(singleRequest.from, singleRequest.body));
             }
-
             res.send(tickets);
         }
     }
@@ -33,6 +32,5 @@ router.post('/twilio', function(req, res) {
     tickets.push(ticket.render(req.body.From, req.body.Body));
     console.log(tickets);
 });
-
 
 module.exports = router;
