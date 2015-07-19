@@ -22,10 +22,7 @@ router.get('/v1/send', function(req, res) {
         }, function(err, responseData) { //this function is executed when a response is received from Twilio
 
             if (!err) { // "err" is an error received during the request, if any
-
                 // "responseData" is a JavaScript object containing data received from Twilio.
-                // A sample response from sending an SMS message is here (click "JSON" to see how the data appears in JavaScript):
-                // http://www.twilio.com/docs/api/rest/sending-sms#example-1
                 console.log('from: ' + responseData.from); // outputs "+14506667788"
                 console.log('to: ' + responseData.to); // outputs "+14506667788"
                 console.log('body: ' + responseData.body); // outputs "word to your mother."
@@ -36,8 +33,6 @@ router.get('/v1/send', function(req, res) {
 });
 
 router.get('/v1/get', function(req, res){
-//    var jsonRes = [];
-//    var last;
     client.messages.list({
     }, function(err, data) {
           return res.send(
@@ -45,8 +40,6 @@ router.get('/v1/get', function(req, res){
                   return {'from': message.from, 'body':message.body};
        }));
     });
-//    console.log(jsonRes);
-//    res.send(jsonRes);
 });
 
 module.exports = router;
