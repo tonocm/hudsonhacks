@@ -15,7 +15,7 @@ module.exports = Header = React.createClass({
             <div className="less">
             </div>
         </div>
-        <div className="title">
+        <div className="title animated fadeInUp">
             <h1>Hungerless</h1>
             <span>Do something good with your food</span>
         </div>
