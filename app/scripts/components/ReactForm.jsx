@@ -8,6 +8,7 @@ var Form = t.form.Form;
 var ReactForm;
 var Donation = t.struct({
     name: t.maybe(t.Str),
+    phone: t.Str,
     food: t.Str,
     allergens: t.maybe(t.Str),
     location: t.Str,
