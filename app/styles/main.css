@@ -2003,8 +2003,8 @@ body {
   width: 100%;
   text-align: center;
   background-color: #D5896F;
-  -webkit-flex: 1 1 400px;
-          flex: 1 1 400px;
+  -webkit-flex: 1 1 430px;
+          flex: 1 1 430px;
 }
 .header .logo {
   margin: auto;
@@ -2047,8 +2047,9 @@ body {
   margin-top: 20px;
 }
 .description .topic h1 {
+  margin-top: 40px;
   font-family: 'Cabin', sans-serif;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 }
 .description .topic span {
   font-family: 'Cabin', sans-serif;
@@ -2105,7 +2106,7 @@ body {
   background-size: 75%;
 }
 .description .topic .show-dont-tell .step .computer {
-  background-image: url('../images/computer-emoji.png');
+  background-image: url('../images/memo-emoji.png');
 }
 .description .topic .show-dont-tell .step .envelope {
   background-image: url('../images/envelope-emoji.png');
@@ -2123,8 +2124,7 @@ body {
 .form {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
-  width: 80%;
+  width: 100%;
   background-color: #04395E;
   color: #FFFFFF;
   z-index: 1;
@@ -2163,6 +2163,7 @@ body {
 .footer {
   background-color: #DAB785;
   height: 200px;
+  padding-top: 20px;
 }
 .footer span {
   margin-left: auto;
@@ -2171,6 +2172,24 @@ body {
   font-family: 'Cabin', sans-serif;
   color: #FFFFFF;
   font-size: 30px;
+  width: 60%;
+  text-align: center;
+}
+.footer .git {
+  background-image: url("../images/git.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 30px;
+  width: 30px;
+}
+.footer a {
+  width: 30px;
+  height: 30px;
+}
+.footer a img {
+  border: 0;
+  height: 50px;
+  width: 50px;
 }
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
