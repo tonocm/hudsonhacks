@@ -8,6 +8,7 @@ exports.render = function (phoneNumber, body) {
     return {'location': location, 'name': name, 'allergies': allergies};
   }
   else{
-    return {'location': 'error', 'name': 'error', 'allergies': 'error'};
+      return {};
+//    return {'location': 'error', 'name': 'error', 'allergies': 'error'};
   }
 };

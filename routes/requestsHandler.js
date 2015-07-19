@@ -27,4 +27,21 @@ router.get('/', function(req, res) {
     );
 });
 
+/* GET users listing. */
+router.post('/twilio', function(req, res) {
+
+      console.log(request.body);
+//      console.log(request.body.user.email);
+//    tickets = [];
+//    var jsonBody = JSON.parse(body);
+//    var len = jsonBody.length;
+//
+//    for(var i=0; i < len; i++){
+//        var singleRequest = jsonBody.pop();
+//        tickets.push(ticket.render(singleRequest.from, singleRequest.body));
+//    }
+//    res.send(tickets);
+});
+
+
 module.exports = router;
