@@ -20,7 +20,7 @@ router.post('/', function(req, res) {
   	else {
 	  	// found a match, do something!
 	  	matching.findSafeSpot(donation.location, function(safeSpotAddress) {
-	  		var uri = 'http://localhost:3000/api/v1/get&to=' + receiver.phone + '&message=' + safeSpotAddress;
+	  		var uri = 'http://localhost:3000/api/v1/send?to=' + receiver.phone + '&message=' + safeSpotAddress;
 	  		request(uri, function (error, response, body) {
 	  			var resp = new Object();
 	  			resp.name = receiver.name;

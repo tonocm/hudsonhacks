@@ -14,6 +14,5 @@ exports.render = function (phoneNumber, body) {
   }
   else{
       return {};
-//    return {'location': 'error', 'name': 'error', 'allergies': 'error'};
   }
 };
