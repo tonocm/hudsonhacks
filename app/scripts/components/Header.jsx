@@ -17,6 +17,7 @@ module.exports = Header = React.createClass({
         </div>
         <div className="title">
             <h1>Hungerless</h1>
+            <span>Do something good with your food</span>
         </div>
       </div>
     );

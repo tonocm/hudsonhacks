@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Leckerli+One);
+@import url(http://fonts.googleapis.com/css?family=Leckerli+One|Patua+One);
 html,
 body {
   width: 100%;
@@ -16,9 +16,9 @@ body {
 .header {
   width: 100%;
   text-align: center;
-  background-color: #ce5d17;
-  -webkit-flex: 1 1 300px;
-          flex: 1 1 300px;
+  background-color: #D5896F;
+  -webkit-flex: 1 1 320px;
+          flex: 1 1 320px;
 }
 .header .logo {
   margin: auto;
@@ -41,9 +41,32 @@ body {
   display: inline-block;
   overflow: hidden;
 }
-.header .title h1 {
+.header .title {
   font-family: 'Leckerli One', cursive;
+}
+.header .title h1 {
   font-size: 70px;
+  margin-bottom: 0;
+}
+.header .title span {
+  font-size: 20px;
+}
+.description {
+  width: 80%;
+  background-color: #FFFFFF;
+  margin-left: auto;
+  margin-right: auto;
+}
+.description .topic {
+  margin-top: 20px;
+}
+.description .topic h1 {
+  font-family: 'Patua One', cursive;
+  margin-bottom: 0;
+}
+.description .topic span {
+  font-weight: normal;
+  font-size: 20px;
 }
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
