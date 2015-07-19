@@ -8,8 +8,6 @@ var authToken = '013a87dba50392d3d8bb7ebec60f1ab8';
 //require the Twilio module and create a REST client
 var client = require('twilio')(accountSid, authToken);
 
-
-
 /* GET users listing. */
 router.get('/v1/send', function(req, res) {
 
@@ -38,23 +36,17 @@ router.get('/v1/send', function(req, res) {
 });
 
 router.get('/v1/get', function(req, res){
-    var jsonRes = [];
-    var last;
+//    var jsonRes = [];
+//    var last;
     client.messages.list({
-    }, jsonRes = function(err, data) {
-    	var jsonRes = [];
-    	data.messages.forEach(function(message) {
-//    	    console.log(message.from);
-//    	    console.log(message.body);
-    	    jsonRes.push({
-    	        'from': message.from,
-    	        'body': message.body
-    	    });
-    	return jsonRes;
-    	});
+    }, function(err, data) {
+          return res.send(
+              data.messages.map( function(message){
+                  return {'from': message.from, 'body':message.body};
+       }));
     });
-    console.log(jsonRes);
-    res.send(jsonRes);
+//    console.log(jsonRes);
+//    res.send(jsonRes);
 });
 
 module.exports = router;
