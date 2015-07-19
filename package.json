@@ -21,6 +21,7 @@
     "twilio": "*"
   },
   "devDependencies": {
+    "animate.less": "^2.2.0",
     "apache-server-configs": "^2.7.1",
     "browserify": "*",
     "connect": "^3.0.1",
