@@ -4,6 +4,7 @@
 
 var React = require('react');
 var Description = require('./Description.jsx');
+var ReactForm = require('./ReactForm.jsx');
 var Body;
 
 module.exports = Body = React.createClass({
@@ -11,9 +12,7 @@ module.exports = Body = React.createClass({
     return (
       <div className="body">
         <Description />
-        <div className="form">
-
-        </div>
+        <ReactForm />
       </div>
     );
   }
