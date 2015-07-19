@@ -3,6 +3,7 @@
 'use strict';
 
 var React = require('react');
+var jQuery = require('jquery');
 var Food;
 
 module.exports = Food = React.createClass({
