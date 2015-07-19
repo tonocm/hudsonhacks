@@ -18,7 +18,6 @@ exports.findDistance = function (origin, destination, callback) {
 			return callback(result.status);
 		}
 	});
-	return distance;
 };
 
 exports.findSafeSpot = function (origin, callback) {
