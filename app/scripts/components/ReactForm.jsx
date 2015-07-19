@@ -22,9 +22,16 @@ module.exports = ReactForm = React.createClass({
     submit: function() {
         var xmlhttp = new XMLHttpRequest();
         var data = {"name": "Andy Powell", "foodName": "Chocolate Chip Cookies","servings": 1,"location": "156 5th Avenue, New York, NY", "allergies": []};
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4) {
+                alert(xmlhttp.responseText);
+            }
+        }
         xmlhttp.open("POST","http://localhost:3000/donations",true);
         xmlhttp.setRequestHeader("Content-type","application/json");
         xmlhttp.send(JSON.stringify(data));
+
+
     },
 
     render: function() {
