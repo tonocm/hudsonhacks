@@ -1,8 +1,8 @@
 var express = require('express');
 var router = express.Router();
 
-var api = require('./routes/api');
-var matching = require('./routes/matching');
+var api = require('./api');
+var matching = require('./matching');
 
 var donations = [];
 

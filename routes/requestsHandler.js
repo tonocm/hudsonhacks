@@ -10,18 +10,18 @@ var uri = 'http://localhost:3000/api/v1/get';
 /* GET users listing. */
 router.get('/', function(req, res) {
     request(uri, function(err, resp, body){
+
         if(!err && resp.statusCode == 200){
+            tickets = [];
             var jsonBody = JSON.parse(body);
 
             var len = jsonBody.length;
             for(var i=0; i < len; i++){
               var singleRequest = jsonBody.pop();
-              //var uniqueRequest =
-              ticket.render(singleRequest.from, singleRequest.body);
+              tickets.push(ticket.render(singleRequest.from, singleRequest.body));
             }
 
-
-            res.send(jsonBody);
+            res.send(tickets);
         }
     }
     );
