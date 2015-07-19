@@ -20,7 +20,7 @@ var Donation = t.struct({
 module.exports = ReactForm = React.createClass({
 
     submit: function() {
-
+        
     },
 
     render: function() {

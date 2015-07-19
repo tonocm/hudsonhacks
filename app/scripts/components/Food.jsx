@@ -37,7 +37,7 @@ module.exports = Food = React.createClass({
             else {
                 image = 0;
             }
-        }, 5000); 
+        }, 3000); 
     },
 
     
