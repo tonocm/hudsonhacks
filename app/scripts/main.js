@@ -4,7 +4,7 @@
 'use strict';
 
 var data = [
-    {author: "James Zeve Martin", text: "This is one comment"},
+    {author: "Helena Wu", text: "This is one comment"},
     {author: "Steven Iseki Martin", text: "This is another comment"}
 ];
 
