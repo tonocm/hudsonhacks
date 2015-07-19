@@ -2,18 +2,13 @@
 /** @jsx React.DOM */
 
 'use strict';
-
-var data = [
-    {author: "James Zeve Martin", text: "This is one comment"},
-    {author: "Steven Iseki Martin", text: "This is another comment"}
-];
-
 var React = require('react');
 var jQuery = require('jquery');
-var CommentBox = require('./components/CommentBox.jsx')
+var Header = require('./components/Header.jsx');
+var App = require('./components/App');
 
 React.render(
-  <div className="container">
-    <p>Hello</p>
-  </div>
+  <App />,
+  document.getElementById('main')
 );
+
