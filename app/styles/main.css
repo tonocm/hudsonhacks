@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Leckerli+One);
+@import url(http://fonts.googleapis.com/css?family=Leckerli+One|Patua+One);
 html,
 body {
   width: 100%;
@@ -16,9 +16,9 @@ body {
 .header {
   width: 100%;
   text-align: center;
-  background-color: #ce5d17;
-  -webkit-flex: 1 1 300px;
-          flex: 1 1 300px;
+  background-color: #D5896F;
+  -webkit-flex: 1 1 320px;
+          flex: 1 1 320px;
 }
 .header .logo {
   margin: auto;
@@ -41,9 +41,192 @@ body {
   display: inline-block;
   overflow: hidden;
 }
-.header .title h1 {
+.header .title {
   font-family: 'Leckerli One', cursive;
+}
+.header .title h1 {
   font-size: 70px;
+  margin-bottom: 0;
+}
+.header .title span {
+  font-size: 20px;
+}
+.description {
+  width: 80%;
+  background-color: #FFFFFF;
+  margin-left: auto;
+  margin-right: auto;
+}
+.description .topic {
+  margin-top: 20px;
+}
+.description .topic h1 {
+  font-family: 'Patua One', cursive;
+  margin-bottom: 0;
+}
+.description .topic span {
+  font-weight: normal;
+  font-size: 20px;
+}
+.form {
+  margin: 60px auto 30px;
+  max-width: 400px;
+  text-align: center;
+}
+.form label {
+  display: inline-block;
+}
+.form .form--group {
+  margin: 10px auto 40px;
+  position: relative;
+  overflow: hidden;
+  height: 100px;
+}
+.form .form--focus {
+  position: absolute;
+  bottom: 25px;
+  left: 0;
+  width: 100%;
+  background: #1ECD97;
+  height: 2px;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+}
+.form .control:focus + .focus {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.form .form--control {
+  display: block;
+  padding: 5px;
+  width: 100%;
+  border: none;
+  border-bottom: solid 2px #eee;
+  background: #f9f9f9;
+  text-align: center;
+  font-size: 2em;
+  outline: none;
+  font-family: Arial, sans-serif;
+}
+.form .error {
+  display: none;
+  color: #FB797E;
+  font-size: 1em;
+  padding: 4px;
+  border-radius: 20px;
+}
+.form .focus {
+  background: #FB797E;
+}
+.form .error {
+  display: block;
+}
+.form .submit {
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 250px;
+  height: 70px;
+  border: 2px solid #1ECD97;
+  border-radius: 40px;
+  background: transparent;
+  color: #1ECD97;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  outline: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color 0.3s, color 0.3s, width 0.3s, border-width 0.3s, border-color 0.3s;
+}
+.form .submit:hover {
+  background-color: #1ECD97;
+  color: #fff;
+}
+.form .submit-disabled,
+.form .submit-disabled:hover {
+  cursor: not-allowed;
+  background: #FB797E;
+  border-color: #F0797E;
+  color: #fff;
+}
+.has .focus {
+  background: #FB797E;
+}
+.has .error {
+  display: block;
+}
+.progress {
+  position: fixed!important;
+  top: 50%;
+  margin-top: -100px;
+  margin-left: 100px;
+}
+.progress-pie-chart {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #E5E5E5;
+  position: relative;
+}
+.progress-pie-chart.gt-50 {
+  background-color: #1ECD97;
+}
+.ppc-progress {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(-50%);
+  top: calc(-50%);
+  width: 200px;
+  height: 200px;
+  clip: rect(0, 200px, 200px, 100px);
+}
+.ppc-progress .ppc-progress-fill {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(-50%);
+  top: calc(-50%);
+  width: 200px;
+  height: 200px;
+  clip: rect(0, 100px, 200px, 0);
+  background: #1ECD97;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.gt-50 .ppc-progress {
+  clip: rect(0, 100px, 200px, 0);
+}
+.gt-50 .ppc-progress .ppc-progress-fill {
+  clip: rect(0, 200px, 200px, 100px);
+  background: #E5E5E5;
+}
+.ppc-percents {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  left: calc(-36.95652%);
+  top: calc(-36.95652%);
+  width: 173.91304px;
+  height: 173.91304px;
+  background: #fff;
+  text-align: center;
+  display: table;
+}
+.ppc-percents span {
+  display: block;
+  font-size: 2.6em;
+  font-weight: bold;
+  color: #1ECD97;
+}
+.pcc-percents-wrapper {
+  display: table-cell;
+  vertical-align: middle;
 }
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
